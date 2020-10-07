@@ -29,16 +29,20 @@ export class __Blank extends React.Component {
         checked={this.state.CheckBox_3}
         onPress={nextChecked => this.setState({ CheckBox_3: nextChecked })}
       />
-      <CheckBox
-        title="Radio button"
-        disabled={false}
-        checkedIcon="dot-circle-o"
-        uncheckedIcon="circle-o"
-        containerStyle={styles.CheckBox_5}
-        checked={this.state.CheckBox_5}
-        onPress={nextChecked => this.setState({ CheckBox_5: nextChecked })}
-      />
-      <Icon iconFont="FontAwesome Icons" name="star" style={styles.Icon_7} />
+      <TouchableOpacity
+        onPress={() => this.props.navigation.navigate("BlankScreen1131408")}
+      >
+        <CheckBox
+          title="Radio button"
+          disabled={false}
+          checkedIcon="dot-circle-o"
+          uncheckedIcon="circle-o"
+          containerStyle={styles.CheckBox_5}
+          checked={this.state.CheckBox_5}
+          onPress={nextChecked => this.setState({ CheckBox_5: nextChecked })}
+        />
+      </TouchableOpacity>
+      <Icon iconFont="FontAwesome Icons" style={styles.Icon_7} />
     </View>
   )
 }
